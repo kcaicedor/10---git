@@ -26,6 +26,7 @@ def load_data():
     df = pd.read_csv('datos_energia.csv')
     df['time'] = pd.to_datetime(df['time'])
     df_index = df.set_index("time")
+    # Fin proceso de lectura de datos
     return df_index
     
 
