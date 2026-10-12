@@ -23,12 +23,11 @@ app.config.suppress_callback_exceptions = True
 def load_data():
     # To do: Completar la función
     # Se agrega el código funcional para que lea el archivoS
-    df = pd.read_csv('datos_energia.csv')
-    df['time'] = pd.to_datetime(df['time'])
-    df_index = df.set_index("time")
+    dfj = pd.read_csv('datos_energia.csv')
+    dfj['time'] = pd.to_datetime(dfj['time'])
+    dfj_index = dfj.set_index("time")
     # Fin proceso de lectura de datos
-    return df_index
-    
+    return dfj_index    
 
 # Cargar datos
 data = load_data()
